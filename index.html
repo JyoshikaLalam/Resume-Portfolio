@@ -3,67 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jyoshika Lalam - Resume Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Jyoshika Lalam</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            overflow-y: auto;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .live-wallpaper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .live-wallpaper video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+        }
+
+        .content {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 10px;
+        }
+
+        .skills, .competencies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .skill-item, .competency-item {
+            background: #1e1e1e;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 45%;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h1>About Me</h1>
-            <h1>Jyoshika Lalam</h1>
-            <p>I am a highly motivated and quick learner with a passion for computer science. I am a team player, and I am always willing to go the extra mile.</p>
-        </section>
-        <section id="education">
-            <h1>Education</h1>
-            <h2>Bachelor of Technology (BTech) in Computer Science Engineering [CSE-CORE]</h2>
-            <p>Gitam University, Visakhapatnam, AP</p>
-            <p>Expected Graduation: 2026</p>
-        </section>
-        <section id="skills">
-            <h1>Technical Skills</h1>
-            <ul>
-                <li>C Programming</li>
-                <li>Python Language</li>
-                <li>Autodesk Fusion 360</li>
-                <li>HTML</li>
-                <li>Object Oriented Programming with Java</li>
-                <li>Data Structures</li>
-                <li>Fundamentals of Artificial Intelligence and Its Applications</li>
-            </ul>
-            <h1>Core Competencies</h1>
-            <ul>
-                <li>Team Collaboration: Proficient in fostering effective team communication.</li>
-                <li>Quick Adaptability: Demonstrated ability to learn and adapt swiftly.</li>
-                <li>Creative Thinking: Skilled in thinking outside the box for innovative solutions.</li>
-                <li>Innovative Problem Solving: Proven expertise in devising innovative problem-solving strategies.</li>
-                <li>Presentation Skills: Capable of delivering clear and impactful presentations.</li>
-                <li>Leadership Experience: Captain, [St Francis De Sales School], [2019-2020]. Organized and managed school events, demonstrating strong project management skills.</li>
-            </ul>
-        </section>
-        <section id="achievements">
-            <h1>Achievements</h1>
-            <ul>
-                <li>Second Runner Up, Ocean Conservation Conference (OCC): Demonstrated deep understanding of marine conservation issues and proposed innovative solutions to prevent storm drain pollution at construction sites.</li>
-                <li>Winner, National Conference of Young Environmentalists, National Bal Bhavan: Presented impactful environmental initiatives.</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h1>Contact Information</h1>
-            <p>Phone: 7901299715</p>
-            <p>Email: <a href="mailto:jyoshika.lalam@gmail.com">jyoshika.lalam@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/jyoshika-lalam-8852a2244">www.linkedin.com/in/jyoshika-lalam-8852a2244</a></p>
-        </section>
-    </main>
-</body>
-</html>
+    <div class="live-wallpaper">
+        <video autoplay loop muted>
+            <source src="\r\video3.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container content">
+        <h1>About Me</h1>
+        <h2>LALAM JYOSHIKA</h2>
+        <p>07901299715 | Visakhapatnam (Urban)</p>
+        <p><a href="https://www.linkedin.com/in/jyoshika-lalam-8852a2244" target="_blank">LinkedIn</a> | <a href="mailto:jlalam3@gitam.in">jlalam3@gitam.in</a> | <a href="https://github.com/JyoshikaLalam" target="_blank">GitHub</a></p>
+        
+        <div class="section">
+            <h2>Objective</h2>
+            <p>I am an aspiring intern eager to contribute my communication skills and basic programming knowledge as a valuable team member in a dynamic and learning-focused environment. I am seeking an entry-level position to utilize my skills. Proven ability to learn new technologies quickly and apply them.</p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Grade/Percentage</th>
+                    <th>Passed out Year</th>
+                </tr>
+                <tr>
+                    <td>BTECH-Cse, Gitam, Visakhapatnam</td>
+                    <td>Grade: 8.37</td>
+                    <td>2022-2026</td>
+                </tr>
+                <tr>
+                    <td>Intermediate, Gravity, Asilmetta</td>
+                    <td>Percentage: 81%</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>SSC, S.F.S School, Seethammadhara</td>
+                    <td>Percentage: 81%</td>
+                    <td>2020</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Internship</h2>
+            <p>Name of the Organization: RISE (Resource Integration Solutions Enterprise Inc.)</p>
+            <p>June 3, 2024 - June 30, 2024</p>
+            <p>Role: Intern</p>
+            <p>Summary: Completed a web development internship, gaining hands-on experience in HTML, CSS, JavaScript, and front-end frameworks like React. Developed and optimized responsive websites, ensuring cross-browser compatibility. Collaborated with a team to design user-friendly interfaces and implement dynamic features. Engaged in version control using Git and GitHub. Enhanced problem-solving skills and learned best practices for web development.</p>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <p>Title: FITLIFE INFORMATION BOARD</p>
+            <p>May 18, 2024 - June 30, 2024</p>
+            <p>Role: Project Leader</p>
+            <p>Personalized Fitness Plans: Imagine having a virtual fitness coach who understands your unique needs. By analyzing your fitness data, an AI can create workout plans just for you, helping you achieve your goals more efficiently.</p>
+            <p>Progress Tracking: Picture a smart assistant that keeps an eye on your fitness journey, showing you clear visual charts of your progress. This way, you can see where you're improving and what areas might need a bit more focus.</p>
+            <p>Diet and Nutrition Guidance: Think of a personal nutritionist in your pocket. By tracking what you eat, an AI can suggest diet plans that match your fitness goals, making healthy eating easier and more effective.</p>
+        </div>
+
+        <div class="section">
+            <h2>Certifications</h2>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Issuer</th>
+                    <th>Issued Date</th>
+                </tr>
+                <tr>
+                    <td>c for Everyone: Programming Fundamentals</td>
+                    <td>University of California, Santa Cruz</td>
+                    <td>Dec. 10, 2022</td>
+                </tr>
+                <tr>
+                    <td>Python Data Structures</td>
+                    <td>University of Michigan</td>
+                    <td>April 9, 2023</td>
+                </tr>
+                <tr>
+                    <td>Strategic Organization Design</td>
+                    <td>Ludwig-Maximilians-Universität München (LMU)</td>
+                    <td>Oct. 17, 2023</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <table>
+                <tr>
+                    <th>Skill Category</th>
+                    <th>Skill Type</th>
+                    <th>Proficiency</th>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>HTML</td>
+                    <td>★★★★★</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>CSS</td>
+                    <td>★★★★★</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>JavaScript</td>
+                    <td>★★★★★</td>
+                </tr>
+                <tr>
+                    <td>Data Science</td>
+                    <td>Python</td>
+                    <td>★★★★</td>
+                </tr>
+                <tr>
+                    <td>Data Science</td>
+                    <td>Java</td>
+                    <td>★★★★★</td>
+                </tr>
+                <tr>
+                    <td>Internet of Things</td>
+                    <td>Programming languages: C, C++, Python, Java, JavaScript, etc.</td>
+                    <td>★★★★</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Achievements</h2>
+            <table>
+                <tr>
+                    <th>Name of the Achievement</th>
+                    <th>Date of Achievement</th>
+                </tr>
+                <tr>
+                    <td>Second runner up at Ocean Conservation Conference</td>
+                    <td>Dec. 10, 2019</td>
+                </tr>
+                <tr>
+                    <td>First in National Bal Bhavan Science Competition</td>
+                    <td>Nov. 1, 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Languages Known</h2>
+            <table>
+                <tr>
+                    <th>Name of the Language</th>
+                    <th>Proficiency</th>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>★★★★★</td>
+                </tr>
+                <tr>
+                    <td>Hindi</td>
+                    <td>★★★★★</td>
+                </tr>
+                <tr>
+                    <td>Telugu</td>
+                    <td>★★★★</td>
+                </tr>
+                </table>
+                </div>
+                
+                <div class="section">
+                    <h2>Strengths</h2>
+                    <p>Rapid Learning Ability, Cross-Functional Collaboration, User-Centric Design, Creative Problem Solving, Attention to Detail</p>
+                </div>
+                
+                <div class="section">
+                    <h2>Hobbies</h2>
+                    <p>Reading self-help books, Reading articles on edge, DIY Electronics, Sports</p>
+                </div>
+                
+                <div class="section">
+                    <h2>Core Competencies</h2>
+                    <ul>
+                        <li>Team Collaboration: Proficient in fostering effective team communication.</li>
+                        <li>Quick Adaptability: Demonstrated ability to learn and adapt swiftly.</li>
+                        <li>Creative Thinking: Skilled in thinking outside the box for innovative solutions.</li>
+                        <li>Innovative Problem Solving: Proven expertise in devising innovative problem-solving strategies.</li>
+                        <li>Presentation Skills: Capable of delivering clear and impactful presentations.</li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2>Leadership Experience</h2>
+                    <p>Captain, St Francis De Sales School, 2019-2020</p>
+                    <p>Organized and managed school events, demonstrating strong project management skills.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>Achievements</h2>
+                    <ul>
+                        <li>Second Runner Up, Ocean Conservation Conference (OCC): Demonstrated deep understanding of marine conservation issues and proposed innovative solutions to prevent storm drain pollution at construction sites.</li>
+                        <li>Winner, National Conference of Young Environmentalists, National Bal Bhavan: Presented impactful environmental initiatives.</li>
+                    </ul>
+                </div>
+                
+                </div>
+                </body>
+                </html>
+                
