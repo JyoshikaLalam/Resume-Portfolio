@@ -1,85 +1,105 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-}
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            overflow-y: auto;
+        }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-nav li {
-    margin-right: 20px;
-}
+        .live-wallpaper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
+        .live-wallpaper video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+        }
 
-nav a:hover {
-    color: #ccc;
-}
+        .content {
+            animation: fadeIn 2s ease-in-out;
+        }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em;
-}
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-section {
-    background-color: #fff;
-    padding: 2em;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+        .section {
+            margin-bottom: 30px;
+        }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+        .section h2 {
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 10px;
+        }
 
-h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
+        .skills, .competencies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        .skill-item, .competency-item {
+            background: #1e1e1e;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 45%;
+        }
 
-li {
-    margin-bottom: 10px;
-}
+        .contact-info {
+            text-align: center;
+        }
 
-a {
-    text-decoration: none;
-    color: #337ab7;
-}
+        .contact-info p {
+            margin: 5px 0;
+        }
 
-a:hover {
-    color: #23527c;
-}
+        .contact-info a {
+            color: #4caf50;
+            text-decoration: none;
+        }
 
-ul li {
-    padding-left: 20px;
-    background-image: url('https://img.freepik.com/free-photo/blue-toned-pack-paper-sheets-with-copy-space_23-2148320442.jpg');
-    background-size: 16px 16px;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-}
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+        }
